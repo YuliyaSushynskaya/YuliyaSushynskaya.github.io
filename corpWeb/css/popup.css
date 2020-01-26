@@ -1,0 +1,729 @@
+/*html, body {
+  min-height: 100%;
+  height: 100%;
+}*/
+html.modal-active, body.modal-active {
+  overflow: hidden;
+}
+
+
+/*//////////////////////////////////////////////////////////
+/////////////////////     POP-UP Cabinet   ////////////////
+//////////////////////////////////////////////////////////*/
+.loginUsernameLabel, .loginPasswordLabel {
+    font-weight: bold;
+}
+
+#modal-cabinet {
+  overflow-y: scroll;
+  position: fixed;
+  /*display: inline-table;*/
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-cabinet.cabinet {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-cabinet.cabinet .modal-background-cabinet .modal-cabinet {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-cabinet.cabinet.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-cabinet.cabinet.out .modal-background-cabinet .modal-cabinet {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-cabinet .modal-background-cabinet {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-cabinet .modal-background-cabinet .modal-cabinet {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-cabinet .modal-background-cabinet .modal-cabinet h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-cabinet .modal-background-cabinet .modal-cabinet p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-cabinet .modal-background-cabinet .modal-cabinet .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+.cabinet-send {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #c5004a;
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    padding-left: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+button.cabinet-send a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP Cabinet    //////////////
+//////////////////////////////////////////////////////////*/
+
+
+/*//////////////////////////////////////////////////////////
+/////////////////////     POP-UP Mobile   ////////////////
+//////////////////////////////////////////////////////////*/
+#modal-mobile-call {
+  overflow-y: scroll;
+  position: fixed;
+  /*display: inline-table;*/
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-mobile-call.mobile {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-mobile-call.mobile .modal-background-mobile .modal-mobile {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-mobile-call.mobile.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-mobile-call.mobile.out .modal-background-mobile .modal-mobile {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-mobile-call .modal-background-mobile {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-mobile-call .modal-background-mobile .modal-mobile {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-mobile-call .modal-background-mobile .modal-mobile h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-mobile-call .modal-background-mobile .modal-mobile p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-mobile-call .modal-background-mobile .modal-mobile .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+.mobile-send {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #c5004a;
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    padding-left: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+button.mobile-send a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP Mobile    //////////////
+//////////////////////////////////////////////////////////*/
+
+
+
+
+/*//////////////////////////////////////////////////////////
+/////////////////////      POP-UP Consult   ////////////////
+//////////////////////////////////////////////////////////*/
+#modal-container-consult {
+  overflow-y: scroll;
+  position: fixed;
+  /*display: inline-table;*/
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-container-consult.consult {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-consult.consult .modal-background-consult .modal-consult {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-consult.consult.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-consult.consult.out .modal-background-consult .modal-consult {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container-consult .modal-background-consult {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-container-consult .modal-background-consult .modal-consult {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container-consult .modal-background-consult .modal-consult h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container-consult .modal-background-consult .modal-consult p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container-consult .modal-background-consult .modal-consult .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+
+/*#modal-container .modal-background .modal .modal-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}*/
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP Consult     //////////////
+//////////////////////////////////////////////////////////*/
+
+
+
+/*//////////////////////////////////////////////////////////
+/////////////////////      POP-UP 1     ////////////////////
+//////////////////////////////////////////////////////////*/
+#modal-container {
+  overflow-y: scroll;
+  position: fixed;
+  /*display: inline-table;*/
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-container.one {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one .modal-background .modal {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container .modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-container .modal-background .modal {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container .modal-background .modal .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+
+/*#modal-container .modal-background .modal .modal-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}*/
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP 1     ////////////////////
+//////////////////////////////////////////////////////////*/
+
+
+/*//////////////////////////////////////////////////////////
+/////////////////////     POP-UP 2      ////////////////////
+//////////////////////////////////////////////////////////*/
+#modal-container-2 {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-container-2.two {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-2.two .modal-background-2 .modal-2 {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-2.two.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-2.two.out .modal-background-2 .modal-2 {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container-2 .modal-background-2 {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#modal-container-2 .modal-background-2 .modal-2 {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container-2 .modal-background-2 .modal-2 h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container-2 .modal-background-2 .modal-2 p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container-2 .modal-background-2 .modal-2 .modal-svg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+#modal-container-2 .modal-background-2 .modal-2 .modal-svg-2 rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP 2     ////////////////////
+//////////////////////////////////////////////////////////*/
+
+/*--- SEND ---*/
+.popup_send {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #c5004a;
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    padding-left: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*--- CLOSE ---*/
+.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #c5004a;
+    
+    width: 155px;
+    height: 40px;
+    padding: 4px;
+    padding-left: 15px;
+    text-align: left;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.popup_close div.popup_dot {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+
+    width: 6px;
+    height: 26px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.popup_close div.popup_dot:first-child {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popup_close div.popup_dot:last-child {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -moz-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  -o-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*-------------*/
+
+/*//////////////////////////////////////////////////////////
+/////////////////////      POP-UP Quickcall   ////////////////
+//////////////////////////////////////////////////////////*/
+#modal-container-quickcall {
+    overflow-y: scroll;
+  position: fixed;
+  /* display: table; */
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-container-quickcall.quickcall {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-quickcall.quickcall .modal-background-quickcall .modal-quickcall {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-quickcall.quickcall.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-quickcall.quickcall.out .modal-background-quickcall .modal-quickcall {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container-quickcall .modal-background-quickcall {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-container-quickcall .modal-background-quickcall .modal-quickcall {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container-quickcall .modal-background-quickcall .modal-quickcall h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container-quickcall .modal-background-quickcall .modal-quickcall p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container-quickcall .modal-background-quickcall .modal-quickcall .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.contacts_send_quickcall {
+  width: 100%;
+  height: 48px; 
+  color: white;
+  background-color: #c5004a;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP Quickcall   //////////////
+//////////////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////////////////////
+/////////////////////      POP-UP jobs Admin   /////////////
+//////////////////////////////////////////////////////////*/
+#modal-container-jobsAdmin {
+    overflow-y: scroll;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 999;
+}
+
+#modal-container-jobsAdmin.jobsAdmin {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-jobsAdmin.jobsAdmin .modal-background-jobsAdmin .modal-jobsAdmin {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-jobsAdmin.jobsAdmin.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-jobsAdmin.jobsAdmin.out .modal-background-jobsAdmin .modal-jobsAdmin {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container-jobsAdmin .modal-background-jobsAdmin {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+#modal-container-jobsAdmin .modal-background-jobsAdmin .modal-jobsAdmin {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container-jobsAdmin .modal-background-jobsAdmin .modal-jobsAdmin h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container-jobsAdmin .modal-background-jobsAdmin .modal-jobsAdmin p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container-jobsAdmin .modal-background-jobsAdmin .modal-jobsAdmin .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+
+/*//////////////////////////////////////////////////////////
+///////////////////// END  POP-UP jobs Admin  //////////////
+//////////////////////////////////////////////////////////*/
+
+.modal, .modal-2, .modal-consult, .modal-quickcall, .modal-jobsAdmin, .modal-mobile {
+  width: 50%;
+  position: relative;
+}
+
+/*//////////////////////////////////////////////////////////
+/////////////////////       MEDIA        ///////////////////
+//////////////////////////////////////////////////////////*/
+@media screen and (max-width: 991px) {
+  .modal, .modal-2, .modal-consult, .modal-quickcall, .modal-jobsAdmin, .modal-mobile {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #modal-container .modal-background, #modal-container-consult .modal-background-consult, .modal-background-mobile {
+    width: 100%;
+  }
+}
+/*//////////////////////////////////////////////////////////
+///////////////////// END  MEDIA              //////////////
+//////////////////////////////////////////////////////////*/
+
+
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+
+/*===== [ pop up ] ======*/
+.frame_absolute {
+    position: absolute;
+}
+.frame_height {
+    height: auto;
+}
+.frame_special {
+    visibility: visible;
+    background-color: white;
+    top: 10px;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+    .frame_absolute {
+        position: absolute;
+    }
+    .frame_height {
+        height: 115px;
+    }
+    .frame_mobile {
+        position: static;
+    }
+    .frame_mobile_contract {
+        height: 170px;
+    }
+}
+

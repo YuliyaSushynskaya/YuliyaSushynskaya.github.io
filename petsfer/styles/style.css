@@ -1,0 +1,613 @@
+/*
+color: #009A3D; green меню, рамка изображений, лого, текст под изображениями
+color: #58DC00; light green
+color: #FFFB97; yellow
+color: #360; deep green цвет шрифра не использовался!
+background-color: #060; цвет зеленых полос под углом
+
+*/
+
+body {
+	width: 100%;
+	font-size: 18px;
+	line-height: 1.2;
+	font-family: Arial, sans-serif;
+	text-align: justify;
+	background-color: white;
+}
+
+.wrapper {   
+	width: 100%;
+	max-width: 1004px;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+}
+
+h1 {
+	max-width: 862px;
+	color: #1b3300;
+	font-size: 24px;
+	padding: 30px 10px;
+	font-family: Arial, serif;
+	text-align: center;
+	background-color: rgba(88, 220, 0, .8);
+	margin: 0 auto 35px;
+}
+
+/*Menu*/
+
+.menu {
+	width: 100%;
+	max-width: 1004px;
+	font-size: 22px;
+	position: fixed; 
+	z-index: 2;		
+}
+
+.topmenu {
+	width: 100%;
+	position: relative;
+	background-color: #009A3D;
+	text-align: center;
+}
+
+.topmenu > li {					
+	display: inline-block; 
+	padding: 15px 0;
+}
+
+.topmenu > li:last-child {
+	padding: 15px 20px; /* так как у этого тега нет ссылки, которая задает отступ*/
+}
+
+.topmenu a {
+ 	color: white;	
+	font-weight: bold;
+	padding: 15px 20px; /*! связан с li:last-child*/
+}
+
+.topmenu li:nth-child(2)  a.arrow:after {
+ 	content: "▼";
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+.topmenu a:hover {
+ 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+li.active a {
+    color: #FFFB97;
+}
+
+li.active a:hover {
+    color: #FFFB97;
+	box-shadow: none;
+}
+
+/*Submenu*/
+
+.submenu {
+	width: 100%;
+    position: absolute;
+    top: 100%;
+	left: 0;
+	background-color: #FFFB97; /*для старых браузеров*/
+	border-bottom: 5px solid #009A3D;
+	background: linear-gradient(to top, #fefcea, #FFFB97);
+	display: none;
+	z-index: 1;	
+	padding: 10px 0 10.67px 110px;
+	text-align: left;
+	box-sizing: border-box;
+	/*display: block; для проверки выпадающего меню*/
+}
+
+.submenu a {
+	padding: 5px;
+	color: #009A3D;
+}
+
+.submenu li {
+	width: 40%;
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+/*Language switcher*/
+
+span.lang   {
+	background-color: #58DC00;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.lang a {
+	display: inline;
+	padding: 0 5px;
+	margin: 0;
+}
+
+.lang .ru {
+	color: black;
+	padding-right: 10px;
+}
+
+/*Header*/
+
+.logo {
+	padding: 86px 30px 30px; /*при фиксированном меню*/
+	/*padding: 30px;*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+.logo p {
+	font-size: 24px;
+	color: #009A3D;
+	padding-top: 2px;
+}
+
+.logo span.pest {
+	color: #009A3D;
+	font-size: 58px;
+}
+
+.logo span.fer {
+	color: #58DC00;
+	font-size: 58px;
+}
+
+.logo img {
+	padding-right: 5px;
+}
+
+/*Slider*/
+
+.slider img {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.slider img {
+	vertical-align: bottom;
+}
+
+.slider {
+	border-top: 5px solid #009A3D;
+}
+
+/*Main*/
+
+section {
+	padding: 0 71px;
+}
+
+.main section img {
+	width: 230px;
+	height: 230px;
+	padding: 5px;
+	background-color: #009A3D;
+	vertical-align: bottom;
+}
+
+figcaption {    
+	padding-top: 15px;
+}
+
+/*Services*/
+
+.services {
+	background: url(../images/background2.jpg) no-repeat top center;
+	padding-top: 33px;
+}
+
+.services .container {
+	overflow: hidden;
+}
+
+.services figure {
+	text-align: center;
+	color: #009A3D;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 35px;
+}
+
+.services img:hover {
+	background-color: #58DC00;
+}
+
+.services figcaption:hover {    
+	color: #58DC00;
+}
+/*два ховера будут объединины потом через js*/
+
+.services .container a { 
+	display: block; 
+	width: 240px;
+	margin: 0 auto;
+}
+
+.services .container div { 
+	float: left;
+	width: 240px;
+	margin: 0 71px 0 0;
+}
+
+.services div:nth-child(3n+3){
+	margin: 0;
+}
+
+/*Advantages*/
+
+.advantages {
+	background: #060 url(../images/background3.jpg) no-repeat top center;
+	padding-top: 23px;
+	background-size:  100%;
+}
+
+.advantages p {
+	color: white;
+	padding-bottom: 35px;
+	/*padding-left: 132px;
+	padding-right: 62px;*/
+	position: relative;
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 15.31%;
+	padding-right: 7.19%;
+}
+
+.advantages p:before {
+	content: "\2714";
+	font-size: 30px;
+	color: yellow;
+	position: absolute;
+	left: 9%; /*left: 78px;*/
+	top: -1.2%;
+}
+
+/*Calculators*/
+
+.calculators {
+	background: url(../images/background4.jpg) no-repeat top center;
+	padding-top: 0px;
+	padding-bottom: 35px;
+}
+
+.calculators .wrap {
+	background-color: rgba(88, 220, 0, .8);
+	margin: 0 auto;
+}
+
+.calculators .wrapInside {
+	overflow: hidden;
+}
+
+.calculators h1 {
+	background: none; 
+	margin: 0 auto 5px;
+}
+
+.calculators img:hover {
+	background-color: white;
+}
+
+.calculators figcaption:hover {    
+	color: white;
+	
+}
+
+.calculators div.wrapInside div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*Блоки расчета*/
+
+.box{
+    width: 98%;
+    margin: 0 auto;
+	padding-bottom: 8px;
+	display: none;
+}
+	
+.tabs:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.tab{
+    display: block;
+    width: 25%;
+	float: left;
+	box-sizing: border-box;
+	border-top: 3px solid #060;
+	border-right: 3px solid #060;
+	background: #009A3D;
+}
+.tab.one {
+	border-left: 3px solid #060;
+}
+
+.tab:hover {
+    background: #cccccc;
+}
+.tab-active {
+    background: #060;
+}
+
+.calculators .box .tabs .link {
+	padding: 15px 0;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+	margin: 0;
+	width: 100%;
+}
+
+.content {
+    background: #cccccc;
+	background: #060;
+    min-height: 220px;
+    padding: 20px 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: white;
+}
+
+#contacts img {
+	width: 20px;
+	height: 20px;
+}
+table {
+	margin-bottom: 20px;
+}
+table td {
+	border: 1px solid white;
+	padding: 5px;
+	vertical-align: top;
+	margin: 0;
+}
+
+table td:first-child {
+	border: 0px solid white;
+	width: 30px;
+}
+
+table td.add {
+	border: 0px solid white;
+	padding-left: 20px;
+}
+
+#box .content p {
+	margin-bottom: 15px;
+}
+#box .content p.itog {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+
+#box  input[type="button"],
+#box  input[type="reset"] {
+	margin: 20px 20px 20px 0;
+}
+
+#box  input.productName {
+	width: 60%;
+	margin-left: 10px;
+}
+
+#itog {
+	background-color: #FFFB97;
+	width: 325px;
+	height: 25px;
+	color: black;
+	padding-left:10px;
+	vertical-align: bottom;
+}
+
+#pesticideCalculator p:first-child {
+	display: none;
+}
+
+
+
+
+
+/*два ховера будут объединины потом через js*/
+
+.calculators figure {
+	text-align: center;
+	color: #1b3300;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 35px;
+	width: 332px;
+	margin: 0 auto;
+}
+
+.calculators a {
+	display: block;
+	text-align: center;
+}
+
+.calculators a:first-child {
+	float: left;
+	width: 332px;
+	margin-left: 65px;
+	margin-right: 3px;
+}
+
+.calculators a:last-child{
+	float: left;
+	width: 332px;
+	margin-left: 65px;
+}
+
+/*Customers*/
+
+.customers {
+	background: url(../images/background1.jpg) no-repeat top center;
+	padding-top: 33px;
+}
+
+.customers p {
+	padding-bottom: 35px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.customers span {
+	font-weight: normal;
+}
+
+.customers div.wrap {
+	padding-top: 35px;
+	overflow: hidden;
+}
+
+.customers a {
+	color: #009A3D;
+}
+
+.customers a:hover {
+	text-decoration: underline;
+}
+
+.customers .left {
+	float: left;
+	width: 45.5%;
+	margin-right: 40px;
+}
+
+.customers .right {
+	float: left;
+	width: 48.5%;
+}
+
+/*Form*/
+section.form {
+	background: url(../images/background1.jpg) no-repeat top center,
+				url(../images/plant.jpg) no-repeat bottom left;
+	padding: 33px 50px 100px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+section.form h1 {
+	margin: 0 21px 68px;
+}
+
+.general_info .container {
+	overflow: hidden;
+}
+
+.general_info input, 
+.message textarea,
+.submit button
+ {
+	font-size: 24px;
+	line-height: 1.2;
+	font-family: Arial, sans-serif;
+	border-width: 0;
+	background-color: rgba(88, 220, 0, .8);
+	outline: none;
+	color: black;
+	text-align: left;
+}
+
+.general_info input {
+	width: 280px; 
+	height: 44px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	margin-bottom: 35px;
+	margin-right: 32px;
+	float: left;
+}
+
+.general_info .container input:nth-child(3n+3){
+	margin-right: 0;
+}
+
+.message textarea {
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	vertical-align: bottom;
+	margin-bottom: 35px;
+}
+
+::-webkit-input-placeholder {color: black;}
+::-moz-placeholder          {color: black;}
+:-moz-placeholder           {color: black;}
+:-ms-input-placeholder      {color: black;}
+
+:focus::-webkit-input-placeholder {color: transparent; outline: none;}
+:focus::-moz-placeholder          {color: transparent; outline: none;}
+:focus:-moz-placeholder           {color: transparent; outline: none;}
+:focus:-ms-input-placeholder      {color: transparent; outline: none;}
+
+
+.general_info input:focus,
+.general_info textarea:focus {
+	outline: 1px solid green;  /*проблема с кроссбраузерностью*/
+	-webkit-box-shadow: 0 0 10px yellow;
+	        box-shadow: 0 0 10px yellow;
+}
+
+.submit button {
+	width: 280px;
+	height: 44px;
+	margin-bottom: 35px;
+	color: black;
+	text-align: center;
+}
+
+.submit {
+	text-align: right;
+}
+
+/*Footer*/
+
+footer {
+	padding: 0 20px 20px;
+	background-color: #060;
+}
+
+footer p {
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+
+footer span {
+	font-size: 20px;
+}
+
+footer img {
+	height: 20px;
+	padding-right: 5px;
+}
+
+/* Стиль для отображения при печати */
+@media print { 
+	span, input[type="button"], input[type="reset"] {
+		display: none;
+	}
+	input,select {
+		font-size: 15pt;
+	}
+}

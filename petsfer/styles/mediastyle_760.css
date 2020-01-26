@@ -1,0 +1,122 @@
+/*Media requests
+671px - next breikpoint, it needs to add an additional media request
+*/
+
+@media screen and (min-width: 672px) and (max-width: 760px) { 
+
+	.wrapper {   
+		max-width: 760px;
+	}
+
+	section {
+		padding: 0 20px;
+	}
+
+	section.form {
+		padding: 33px 10px 100px;
+	}
+
+	section.form h1 {
+		margin: 0 11px 68px;
+	}
+
+	.topmenu > li:last-child {
+		padding: 15px 10px; /*!! так как у этого тега нет ссылки, которая задает отступ*/
+		position: absolute;
+		top: 100%;
+		right: 0%;
+		z-index: 3;
+	}
+
+	.topmenu a {
+		padding: 15px 10px; /*!! связан с li:last-child*/
+		font-size: 20px;
+	}
+
+	.topmenu .lang a {
+		padding: 3px 3px;
+	}
+
+	.submenu {
+		width: 90%; 
+		top: 100%;
+		left: 5%;
+		display: none;
+		padding: 12px 5px 5px 5px;
+		text-align: center;
+	}
+
+	.submenu li {
+		width: 90%; 
+		display: block;
+		padding: 5px 5px;
+		margin: 0 auto;
+		font-size: 18px;
+	}
+
+	.submenu a {
+		padding: 3px 5px;
+	}
+
+	.services .container div { 
+		width: 50%;
+		margin: 0 auto;
+	}
+
+		.calculators figure {
+		font-size: 16px;
+		width:100%;
+	}	
+		
+	.calculators a:first-child {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.calculators a:last-child{
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.customers p {
+		/*font-weight: normal;*/
+		padding-left: 10px;
+		text-align: center;
+	}
+
+	.customers .left {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.customers .right {
+		float: none;
+		width: 100%;
+	}
+
+	.general_info input {
+		width: 49%;
+	}
+
+	.general_info input {
+		margin-right: 0;
+	}
+
+	.general_info .container input:nth-child(3n+3){
+		margin-right: 0;
+	}
+
+	.general_info .container input:nth-child(odd){
+		margin-right: 2%;
+	}
+
+/*конец*/	
+}
+
+
+
+	

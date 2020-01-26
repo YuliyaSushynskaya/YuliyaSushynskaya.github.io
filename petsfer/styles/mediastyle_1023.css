@@ -1,0 +1,92 @@
+/*Media requests*/
+
+@media screen and (min-width: 777px) and (max-width: 1023px) { 
+
+	.wrapper {   
+		max-width: 1023px;
+	}
+
+	section {
+		padding: 0 40px;
+	}
+
+	section.form {
+		padding: 33px 20px 100px;
+	}
+
+	.topmenu > li:last-child {
+		padding: 15px 15px;  /*!!так как у этого тега нет ссылки, которая задает отступ*/
+		position: absolute;
+		top: 100%;
+		right: 0%;
+		z-index: 3;
+	}
+
+	.topmenu a {
+		padding: 15px 15px; /*!! связан с li:last-child*/
+	}
+
+	.submenu {
+		width: 90%; /*!!*/
+		top: 100%;
+		left: 5%;
+		display: none;
+		padding: 12px 5px 5px 5px;
+		text-align: center;
+	}
+
+	.submenu li {
+		width: 90%; /*!!*/
+		display: block;
+		padding: 5px 5px;
+		margin: 0 auto;
+		font-size: 18px;
+	}
+
+	.submenu a {
+		padding: 3px 5px;
+	}
+
+	.services .container div { 
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.calculators a:first-child {
+		width: 50%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.calculators a:last-child{
+		width: 50%;
+		margin-left: 0;
+	}
+
+	.customers p {
+		padding-left: 10px;
+		text-align: center;
+	}
+
+	.general_info input {
+		width: 49%;
+	}
+
+	.general_info input {
+		margin-right: 0;
+	}
+
+	.general_info .container input:nth-child(3n+3){
+		margin-right: 0;
+	}
+
+	.general_info .container input:nth-child(odd){
+		margin-right: 2%;
+	}
+
+/*the end*/	
+}
+
+
+
+	

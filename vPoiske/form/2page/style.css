@@ -1,0 +1,120 @@
+﻿body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	text-align:center;
+	background-color: rgba(0, 0, 0, 0);
+ } /*все остальные, 4 остаются по умолчанию*/
+ 
+ .new1 { /*вся форма*/
+	width: 980px; /*можно ли в % ?*/
+	background: #fff url(img/p.png) center center repeat-y;
+	color: #424242; /*серые буквы*/
+	margin: 50px auto;
+	padding:20px;
+}
+
+.new1:after {/*Это применять ВЕЗДЕ!!!!Разобрать. Разобрали*/
+	content: ""; /*генерируем пустоту, не в табличный контент*/
+	display: block;
+	clear: both;
+} /*это применить нужно в лр №4.1 или в 4.2*/
+
+form { /*первая часть формы(основная)*/
+	width:50%;
+	float: left;
+}
+
+.new2 { /*серые полоски-разделители*/
+	height:2px;
+	background: #d2d3d3;/* светло-серый*/
+	margin:5px  auto 25px auto;
+}
+
+.new3 { /*серая полоска-разделитель внизу*/
+ 
+	margin:35px  auto 10px auto; /*	отступ div снизу*/
+}
+
+h1 {
+	font-size: 24px;
+}
+
+label{
+	font-weight: bold;
+}
+
+img {
+	margin:60px auto 0px auto;
+}
+
+#xc {
+	margin:5px auto 30px auto;
+
+}
+	 
+input[type="button"] {
+	border-radius:10px; /*закругление углов у кнопки*/
+	width: 180px; /*ширина кнопки*/
+	padding: 5px 35px;/*отступы для текста*/
+	color:#fff;
+	border: 2px solid #fff; /*цвет темно бирюзовый*/
+	outline:none; /*убирает прямоугольную рамку вокруг кнопки*/
+	background: linear-gradient(to bottom,#3db8b8, #298181); /*градиент*/
+	display:inline-block;
+}
+
+input[type="button"]:hover{
+	background:#298181; /*цвет темно бирюзовый при наведении*/
+}
+
+input[type="button"]:active{
+	border: 2px solid #298181; /*при нажатии темно бирюзовый вет*/
+}
+
+input {
+	border-width: 0; /*всегда прописывается, т к разные браузеры сами прописывают толщину  разной величины*/
+	border: 1px solid #bfc0c0;
+	display:block;
+	border-radius:10px;
+	padding:5px;
+	margin:20px auto;
+}
+
+input[type="file"] {
+	border: none;
+	width: 23%;
+	display:inline-block;
+}
+
+input:focus{
+   /*фокус хорошо использовать т к его можно исп с tab*/
+	box-shadow: 0 0 0 2px rgba(51,153,153,.2);
+	outline:none;
+	border: 1px solid #399;
+}
+
+input[type="file"]:focus {
+	box-shadow: none;
+	border: 1px solid transparent;
+}
+	
+::-webkit-input-placeholder { /*такой вариант надписи подсказки наиболее популярный*/
+	font: 12px  'Open Sans', sans-serif;
+	color: #a9a9a9;
+	letter-spacing: 1px; /*Определяет интервал между символами в пределах элемента*/
+	text-align: center;
+}
+
+:focus::-webkit-input-placeholder { /*Псевдокласс, с помощью которого задаётся стилевое оформление(шрифт, цвет) подсказывающего текста созданного атрибутом placeholder.*/
+	color: transparent;
+}
+
+footer p{
+	clear:both;
+	margin:auto;
+}
+
+a{
+	color: #298181;
+}
+}

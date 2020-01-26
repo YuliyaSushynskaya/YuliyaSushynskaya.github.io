@@ -1,0 +1,76 @@
+﻿
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	text-align:center;
+	background-color: rgba(0, 0, 0, 0);
+ } /*все остальные, 4 остаются по умолчанию*/
+ 
+ .new1 { /*вся форма*/
+	width: 980px; /*можно ли в % ?*/
+	background: #fff url(img/p.png) center center repeat-y;
+	color: #424242; /*серые буквы*/
+	margin: 50px auto;
+	padding:20px;
+}
+
+.new1:after {/*Это применять ВЕЗДЕ!!!!Разобрать. Разобрали*/
+	content: ""; /*генерируем пустоту, не в табличный контент*/
+	display: block;
+	clear: both;
+} /*это применить нужно в лр №4.1 или в 4.2*/
+ 
+ form { /*первая часть формы(основная)*/
+	width:50%;
+	float: left;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+label {
+	font-weight: bold; 
+	display:block;
+}
+input{
+	margin:5px;
+}
+
+.new2 { /*серые полоски-разделители*/
+	height:2px;
+	background: #d2d3d3;/* светло-серый*/
+	margin:5px  auto 25px auto;
+}
+
+.new3 { /*серая полоска-разделитель внизу*/
+ 	margin:30px  auto 10px auto; /*	отступ div снизу*/
+}
+
+#map { /*карта*/
+	height:380px; /*как сделать не фиксированую величину?*/
+	width: 100%;
+}
+
+img {
+	margin:60px auto 0px auto;
+}
+
+input[type="button"] {
+	border-radius:10px; /*закругление углов у кнопки*/
+	width: 200px; /*ширина кнопки*/
+	padding: 5px 35px;/*отступы для текста*/
+	color:#fff;
+	border: 2px solid #fff; /*цвет темно бирюзовый*/
+	outline:none; /*убирает прямоугольную рамку вокруг кнопки*/
+	background: linear-gradient(to bottom,#3db8b8, #298181); /*градиент*/
+}
+
+input[type="button"]:hover{
+	background:#298181; /*цвет темно бирюзовый при наведении*/
+}
+
+input[type="button"]:active{
+	border: 2px solid #298181; /*при нажатии темно бирюзовый вет*/
+}
+

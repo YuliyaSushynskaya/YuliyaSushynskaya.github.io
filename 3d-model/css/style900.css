@@ -1,0 +1,109 @@
+@media screen and (max-height: 900px) 
+{
+
+.content{
+display:none;
+}
+
+#button{
+font-size:14px;
+}
+.window {
+			font-size:14px;
+			padding:30px;
+		        }
+#section-section1{
+	padding-top:75px;
+}
+section{
+	padding-top:20px;
+}
+	
+	h2{
+	line-height:45px;
+		font-size:46px;
+	}
+	
+	h3{
+		font-size:16px;
+		padding-bottom:3px;
+	}
+	
+#intro{
+font-size:18px;
+}
+
+#hidenDescription{
+	font-size:14px;
+}
+
+#whowe
+{
+padding-bottom:20px;
+font-size:18px;
+}
+
+.whoelse
+{
+font-size:16px;
+}
+.window p{
+padding-top:10px;
+padding-bottom:0;
+}
+p
+{
+font-size:15px;
+}
+#explain{
+font-size:14px;
+}
+
+#showSlicer, #printer{
+height:450px;
+padding-top:20px;
+}
+.cd-image-container
+{
+margin-top:70px;
+}
+.slidefotopolimer{
+height:450px;
+margin-top:75px;
+}
+#section-section6 .holder 
+{
+margin-left:10px;
+}
+
+#showvideo
+{
+	margin-right:10px;
+	height:70%;
+}
+
+.slidefotopolimer {
+ width: 470px;
+ height: 450px;
+ background-size:cover;
+}
+
+
+.final{
+	 font-size:16px;
+	 line-height:26px;
+	 }	
+	.final p{
+		padding-bottom:0;
+		 font-size:16px;
+	}
+		#section-section8 {
+		background-image: none;
+	margin-top:20px;
+	}
+.cat{
+height:120px;
+}
+}
+
+

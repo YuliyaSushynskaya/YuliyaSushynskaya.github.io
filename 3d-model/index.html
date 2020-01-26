@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<meta charset="utf-8">
+<title> Happy BDay, Urbans </title>
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:300,400" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style900.css" rel="stylesheet">
+<link href="css/preloader.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.touchSwipe.js"></script>
+    <script src="js/jquery.horizonScroll.js"></script>
+	<script src='js/hidesDescription.js'></script>
+
+	<script src='js/jquery.wobblewindow.min.js'></script>
+	<script src="js/bonfire.js"></script>
+	<script src="js/music.js"></script>
+				
+				<script>
+    $(function () {
+        $('.letbonfire').clickFireworks({
+            id: 'fireworks', // canvas id
+            appendTo: '.letbonfire', // append canvas to where, default is body
+            zIndex: 100 // canvas z-index, make it higher than anything on the page
+        });
+    });
+			</script>
+			
+			<script src="js/modernizr.js"></script> <!-- Modernizr -->
+			<script src='js/progressbar.js'></script>
+
+			<!-- Preloader -->
+			<div id="hellopreloader">
+			<div id="hellopreloader_preload"></div>
+				
+			</div>
+			<script>
+				var hellopreloader = document.getElementById("hellopreloader_preload");
+				function fadeOutnojquery(el){
+					el.style.opacity = 1;
+					var interhellopreloader = setInterval(function(){
+						el.style.opacity = el.style.opacity - 0.05;
+						if (el.style.opacity <=0.05){ 
+							clearInterval(interhellopreloader);
+							hellopreloader.style.display = "none";}
+					},16);}
+					window.onload = function(){
+						setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
+			</script>
+				
+	
+    <script> <!-- колеблющиеся окна (слева) -->
+
+        $( document ).ready( function() {
+            var settings = {
+                name: 'window_1',
+                depth: 1,
+                offsetX: 0,
+                offsetY: 0,
+                moveTypeIn: 'move',
+                moveTypeOut: 'wobble',
+                wobbleFactor: 0.9,
+                wobbleSpeed: 0.1,
+                moveSpeed: 3,
+                lineWidth: 1,
+                lineColor: '',
+                bodyColor: '#FFF',
+                numberOfXPoints: 7,
+                numberOfYPoints: 5,
+                movementLeft: true,
+                movementRight: true,
+                movementTop: true,
+                movementBottom: true,
+                debug: false
+            };
+ $( '.window' ).wobbleWindow( settings );
+} );
+
+    </script>
+	
+</head>
+<body>
+
+
+
+<section data-role="section" id="section-section1">
+
+<div class="progressContainer">
+		<div class="progressBar">
+
+		</div>
+</div>
+
+<audio id="player" src="audio/franc_jozef_gajdn_-_sotvorenie_mira.mp3"> </audio>
+
+<a id="button" title="button">вкл звук</a>
+
+	<div class="firstpage"> 
+	
+	<div id="intro">
+		
+	<h2>Ура! Нашему делу совсем скоро исполнится <span id="accent">год</span>.</h2>
+	<br>
+	
+	За это время мы воплотили наше хобби в жизнь, приобрели постоянных заказчиков и выполнили много важных проектов<span class="letbonfire" id="hideDescription">*</span>. 
+	<br>
+	<span id="hidenDescription">Так, это всё скучное описание, которое Вы уже, наверное, хотите пролистать, так что давайте сразу приступим к делу.</span>
+	</div>
+	
+	<div class="content">
+	<div class="content__container">
+    <p class="content__container__text">
+      Листай 
+    </p>
+    
+    <ul class="content__container__list">
+	<li class="content__container__list__item">далее</li>
+      <li class="content__container__list__item">колёсиком мыши</li>
+      <li class="content__container__list__item">клавиатурой</li>
+	        <li class="content__container__list__item"><s>силой мысли</s></li>
+    </ul>
+	</div>
+	</div>
+	
+	
+	</div>
+	</section>
+<section data-role="section" id="section-section2">
+	<img class="decoration" id="motion" src="images/motion.png" alt="motion">
+	<div class='holder'>
+	<div class='window'>
+	<h3 id="whowe">Привет, мы - компания <span>Urbans </span> и занимаемся 3D печатью и моделированием.</h3>
+	<p class="whoelse">В честь дня рождения мы решили рассказать Вам <span>про процесс печати</span>, как самую интересную составляющую нашей работы, а если быть точнее: о печати филаментом* и фотополимером**.
+	</p>
+	<p class="whoelse">
+	Ну и приготовьтесь: дальше будет много букв.
+	</p>
+	<p id="explain">* - пластик в катушках 
+	<br>
+	** - жидкий пластик 
+	</p>
+	
+	</div>
+	
+	
+					<div class="item" data-animation-path-duration="1700" data-animation-path-easing="easeInOutBack" data-morph-path="M 440.9,118.5 C 486.5,189.8 499,297.9 458.3,371.8 422.2,437.2 335.8,475.1 261.5,477.3 181.4,479.6 83.9,445.4 43.22,376.1 -0.2483,302.1 13.51,189.9 61.98,119.1 104.5,56.88 190.6,20.5 265.7,22.71 332.2,24.67 405,62.28 440.9,118.5 Z" data-path-translateY="-20" data-animation-image-duration="2000" data-animation-image-easing="easeInOutQuart" data-image-translateY="40" data-image-scaleX="1.3" data-image-scaleY="1.3" data-deco-scaleX="0.8" data-deco-scaleY="1.3">
+					<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
+						<clipPath id="clipShape4">
+							<path class="item__clippath" d="M 402.7,215.5 C 433.9,280.4 488.1,367.2 447.7,426.8 410.1,482.2 316.7,460.2 249.7,460.6 182.8,461.1 88.08,485.5 51.26,429.5 10.29,367.3 73.19,279.4 106.9,213 141.8,144 176.6,33.65 253.9,33.7 332.2,33.75 368.8,144.9 402.7,215.5 Z" />
+						</clipPath>
+						<g class="item__deco">
+							<use xlink:href="#deco4" />
+						</g>
+						<g clip-path="url(#clipShape4)">
+							<image class="item__img" xlink:href="images/plastic.jpg" x="0" y="0" height="500px" width="500px" />
+						</g>
+					</svg>
+					<p>
+					*Кстати, практически всё на этом сайте так или иначе движется: для того чтобы заставить фигуры придти в движение нужно или навести курсор мыши, или кликнуть, или потянуть. 
+					</p>
+					</div>
+					
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+			
+	</div>
+	
+	
+	
+</section>
+
+<section data-role="section" id="section-section3">
+	
+	<div class='holder'>
+	<div class='window'>
+	<h3>
+	3D печать есть <span>послойное создание</span> объекта по цифровой 3D модели.
+	</h3>
+	<p>
+	Перед печатью любая 3D модель «нарезается» <span>слайсером</span>. Это ПО создает <span>gcode</span>, программу для принтера, в которой содержатся все необходимые <span>данные для печати</span>, такие как: 
+	<ul>
+	<li>маршрут следования печатающей головки</li>
+	<li>скорость перемещения</li>
+	<li>температура нагрева сопла</li>
+	<li>стола</li>
+	<li>обдув и т.д.</li>
+	</ul>
+	</p>
+<p>	Мы используем <span>два вида печати</span>: 
+	<ul>
+	<li title="FDM – fused deposition modeling">моделирование методом послойного направления 
+	</li>
+	<li title="SLA – stereo lithography"> лазерную стереолитографию </li>
+	</ul>
+	</p>
+	</div>
+	</div>
+	
+	<img class="decoration" src="images/plastichno.png" alt="plastichno">
+	<img id="showSlicer" src="images/slicer.png" alt="slicerpreview">
+	<script>
+		$("img").bind("click", function() {
+			  var src = ($(this).attr("src") === "images/slicer.png")
+							? "images/slicer.jpg" 
+							: "images/slicer.png";
+			  $(this).attr("src", src);
+		});
+		
+	</script>
+</section>
+
+<section data-role="section" id="section-section4">
+	
+	<div class='holder'>
+	<div class='window'>
+
+	<h3>Что есть <span>послойная</span> печать?</h3>
+	<p>
+	<span>Материал</span> для печати (пластиковая нить в катушках) <span>подается</span> с помощью шагового двигателя по тефлоновой трубке <span>в печатающую головку</span>, в которой оно проходит через сопло, разогретое до определенной температуры <span>и накладывается</span> заданными <span>слоями</span> по маршруту, который задан в gcode.
+	</p>
+	<p>
+	В некоторых принтерах существует возможность печати двумя и более материалами. Второй материал часто используют как материал для поддерживающих структур, что позволяет получать гладкие наклонные поверхности.
+	</p>
+	</div>
+	</div>
+	
+	<img class="decoration" src="images/poligon.png" alt="poligon">
+	<img id="printer" src="images/printer.jpg" alt="printerpreview">
+	<script src='js/gif.js'></script>
+
+	
+</section>
+
+<section data-role="section" id="section-section5">
+	
+	<div class='holder'>
+	<div class='window'>
+	<h3>Что дальше?</h3>
+	<ul>От момента снятия фигурки с печатного стола до момента покраски проходит еще немалое время, которое затрачивается на: 
+	<li>склейку (при необходимости);</li> 
+	<li>шлифовку;</li>
+	<li>грунтовку;</li> 
+	<li>корректировку возможных изъянов.</li>
+	</ul>
+	<br>
+	<p>
+	Вообще пластик бывает разных цветов, его палитра (в зависимости от вида) довольно широка. 
+	Но проще и интереснее, безусловно, проводить окраску уже готового изделия: больше простор для творчества, да.</p>
+
+	</div>
+	</div>
+	 
+	 	<figure class="cd-image-container">
+		<img src="images/after.jpg" id="backimg" alt="Original Image">
+		<span class="cd-image-label" data-type="original"></span>
+		<div class="cd-resize-img" > <!-- the resizable image on top -->
+			<img src="images/before.jpg" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified"></span>
+		</div>
+
+		<span class="cd-handle"></span>
+	</figure> <!-- cd-image-container -->
+
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/mainImages.js"></script> <!-- Resource jQuery -->
+
+	</section>
+
+
+<section data-role="section" id="section-section6">
+	
+	<div class='holder'>
+	<div class='window'>
+
+<h3>С фотополимерным принтером всё совсем по-другому.</h3>
+<ul>
+<li>
+в ванну принтера перед печатью наливается жидкий полимер;
+</li>
+<li>
+платформа, к которой будет крепиться изделие, опускается на дно ванны с полимером;
+</li>
+<li>
+далее платформа поднимается на расстояние равное одному слою печати и начинается засветка лазером с длиной волны 405 нм; 
+</li>
+<li>
+лазер с помощью системы зеркал и подвижной каретки рисует слой модели по прозрачному дну ванны, полимер под действием ультрафиолетового излучения твердеет и образует слой модели;
+</li>
+<li>
+платформа поднимается, чтобы начать формирование второго слоя. И так до тех пор, пока не закончатся слои, прописанные в слайсере.
+</li>
+</ul>
+	</div>
+	</div>
+	
+	<div id="showvideo" >
+	<video width="600" poster="images/preview.png" controls>  
+		<source src="video/Howslaworks.mp4">
+	<a href="video/Howslaworks.mp4">
+		Собственно в этом видео краткое описание, как работают принтеры с лазерной стереолитографией. 
+	</a>
+    </video>
+	</div>
+	
+</section>
+
+<section data-role="section" id="section-section7">
+	
+	<div class='holder'>
+	<div class='window'>
+<ul>
+<li>
+после печати изделие <span>промывается</span> в изопропиловом спирте, чтобы удалить излишки материала (вот те конструкции-поддержки, с помощью которых деталь крепится под наклоном к платформе); 
+</li>
+<li>
+для придания твердости, промытые детали <span>досвечиваются</span> под ультрафиолетом (<s>так как солнца в Беларуси нет, то </s> основным источником ультрафиолета является лампа);
+</li>
+<li>
+ну и далее идет непосредственный процесс <span>окрашивания</span> детали.
+</li>
+</ul>
+<br>
+<p>
+Стоит отметить, что фотополимерные принтеры, как правило, используются, когда важна <span>точность</span> изготовления деталей или для печати изделий малого размера.
+</p>
+</div>
+</div>
+
+<div class="slidefotopolimer">
+	<img src="images/afterfotopolimer.jpg" alt="afterfotopolimer">
+	<div class="mask">
+	</div>
+</div>
+
+
+
+</section>
+
+<section data-role="section" id="section-section8">
+	<div class="final">
+	<p>
+		На этом наша мини-лекция подошла к концу. Надеемся, что были полезными и ответили хотя бы на часть вопросов. 
+	<br>
+		Если у вас ещё остались сомнения/недосказанности/спорные моменты, пишите нам на <span >info@urbans.by </span> или звоните на наш номер <span> 8(029)167-44-27 </span>.
+	</p>	
+	
+	
+	Ну и ещё раз напоминаем, что до нашего дня рождения осталось всего ничего:
+	<div id='timer'><script src="http://megatimer.ru/s/d268d694f48531069bc4f37149b0b7bf.js">
+	</script>
+	</div>
+	<p id="thanks">Поэтому спешите сделать заказ и получить 10% скидку, пока работает таймер.
+	</p>
+	<p id="thanks2">Спасибо, что Вы с нами :)</p>
+	</div>
+<img class="cat" src="images/cat.png" alt="cat" onclick="this.style.left='1900px'">
+
+
+</section>
+
+
+<script>
+    $('section').horizon();
+    $(document).on('click', '.go-to-2', function () {
+        $(document).horizon('scrollTo', 'section-section2');
+    });
+</script>
+
+</body>
+</html>

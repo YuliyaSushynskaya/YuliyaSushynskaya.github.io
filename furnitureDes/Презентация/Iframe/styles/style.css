@@ -1,0 +1,795 @@
+﻿/*1.повторяющиеся свойства цвета шрифта и фона*/
+a:hover, .info span, .info a, .infographic a, h4, .obyavlenya li:nth-child(2), figcaption p, .otvet h5, .otvet span, .otvet h6 {
+	color:#008080; /*бирюзовый цвет шрифта*/
+ }
+ 
+ header a,  button,  section p, section span, figure h6, .otvet, .info a:hover, .infographic a:hover, .post-social a:hover { /*можно ли текст задать в header, чтобы отдельно не прописывать*/ 
+	color: #fff; /*белый цвет шрифта*/
+ }
+ 
+ .Bloki, figure h6, .otvet  p, .info a:hover, .infographic a:hover, .post-social a:hover {
+	 background: #008080; /*бирюзовый фон*/
+}
+
+h4,  .Bloki, .filtr, article,  .info p, footer img, .info span{
+	margin:20px; /*отступы между блоками*/
+}
+
+/*2.основной код*/
+#fon{
+	filter: blur(0px);
+	/*background-color: #fff;*/
+	position:none;
+}
+#fon, section h2 span{
+	width: 100%;
+	font-family:'Open Sans', sans-serif;
+	color: #424242;
+}
+
+body {
+	position:relative;
+}
+
+li, header form, .menu1 img,  nav li, .foter{
+	display: inline-block; 
+	padding-right:10px;
+} 
+
+header {
+	background: #283038;
+	font-size: 12px;
+	padding: 10px 20px;
+}
+  
+#searchform input {
+	width:290px;
+	padding-left:10px;
+	outline: 1px solid #283038;
+}
+
+#searchform input:focus{
+	outline: 1px solid #008080;
+}
+
+::-webkit-input-placeholder{
+	font: 12px 'Open Sans', sans-serif;
+}
+ 
+:focus::-webkit-input-placeholder{
+	color: transparent; 
+ }
+ 
+ button {
+	outline:none;
+	border: none; 
+	background: linear-gradient(to bottom,#3db8b8, #298181); 
+	border-radius:10px; 
+	padding: 5px 10px;
+}
+ 
+button:active{
+	border: none; 
+	color:#298181;
+}
+
+header ol:nth-child(1) { /*создать блог, вход, регистация*/
+	float:right;
+}
+
+header {
+	overflow:hidden;
+}
+
+header li:nth-child(3){
+	padding:0; /*отменяем ранее заданное для всех li padding-right:10px;*/
+}
+
+ /*навигация*/
+span {
+	color: #c95a58; 
+}
+
+nav li {
+	width:12%;
+	padding: 30px 0 10px 0;
+}
+
+.menu>li:first-child { /*логотип*/
+	float:left;
+	font-size:24px;
+	font-weight: 900;
+	text-transform:uppercase;
+	padding: 30px 0 0 0;
+}
+
+.menu>li:first-child a {
+	background: url("img/Llogotip.png")right top no-repeat;
+	padding:20px 20px 0 20px;
+}
+
+.menu>li:first-child a:hover {
+	color:#000;
+}
+
+nav { 
+	width:100%;
+	position:relative;
+	text-align: center;
+	font-size: 14px;
+	clear: both;
+}
+
+.menu>li:nth-child(2) {
+	width:18%;
+	float:right;
+	text-align:right;
+	padding-right:20px;
+}
+
+nav img,.filtr img, section span{
+	display: block;
+	margin:0px auto;
+}
+
+.menu ol {
+	display: none; 
+	position: absolute; 
+	top: 57px;  
+	left: 0px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+ 
+.menu>li:hover ol{
+	width:100%;
+	display: block; 
+	border-top: 1px solid #000;
+	background: #fff;
+ }
+  
+/*банер*/
+section  {
+	clear: both;
+	height: 460px;
+	background: url("img/karta.png")  center center no-repeat ,linear-gradient(to bottom left,#56DBD4, #fff);
+	overflow:hidden;
+}
+
+section>a:first-child {
+	width: 13%;
+	float:right;
+	margin: 200px auto;
+	border-left: 1px solid #000;
+	padding: 10px 20px;
+}
+.view>div:first-child {
+	float:lefr;
+	margin: 200px auto;
+	border-right: 1px solid #000;
+	text-align:right;
+	padding: 10px 20px;
+}
+
+.view>img{
+	position: absolute;
+	top: 35%;
+	left: 150%;
+	-webkit-transform: scale3d(1, 0.01, 1) rotate(0deg) ;
+	transition: all 0.5s ease-out;
+}
+
+.view-f:hover  img {
+	-webkit-transform:scale3d(1, 1, 1) rotate(360deg);
+	transition-delay: 0.7s;
+}
+
+.view {
+	width: 25%;
+	height: 460px;
+	position:absolute;
+	cursor: default;
+	text-align:center;
+ }
+section a:nth-child(2) {
+	float:left;
+	border-left: none;
+	border-right: 1px solid #000;
+	text-align:right;
+}
+
+section p {
+	/*border-bottom: 1px solid #000;*/
+	font-size:40px;
+	padding: 80px 300px 0 0;
+	margin: 0 25%;
+	text-align: center;
+}
+
+section h2 {
+	font-size:30px;
+	padding-left: 50%; 
+}
+
+section span {
+	font-weight:900;
+	font-size: 70px;
+}
+
+ /*кнопка*/
+section button {
+	border-radius:10px; 
+	width: 180px; 
+	padding:5px 0;						
+	border: 1px solid #3db8b8; 
+	outline:none; 
+	background: transparent; 
+}
+
+section button:hover{
+	background: linear-gradient(to bottom,#3db8b8, #298181);
+	transition: all 0.2s ease;
+	
+}
+
+.mask a{
+	margin:0;
+	padding:10px 55px;
+	color:#3db8b8;
+}
+.mask a:hover {
+	color:#fff;
+}
+
+.mask p, .mask img, .mask h2 {
+	font-family:'Open Sans', sans-serif;
+	color: #424242;
+	width:90%;
+	 padding: 10px 0;
+	 font-size:16px;
+	 margin:0 20px;
+}
+
+.view .mask {
+	width:430px;			
+	position: absolute;
+	top: 0;
+	left: 0;
+ }
+ 
+ .view-f .mask {
+	width:430px;
+	transform: translateX(-500px);
+	opacity: 1;
+	transition: all 0.4s ease-in-out;
+}
+
+.view-f:hover .mask {
+	transform: translateX(0px);	
+}
+
+/*названия разделов, блоки*/
+h4 {
+	font-size: 30px;
+}
+
+.Bloki {
+	height:2px;
+}
+
+/*фильтр*/
+.filtr ol {
+	overflow:hidden;
+}
+.filtr li {
+	border-bottom:2px solid #fff;
+	padding:0 5px; /*для того, чтоы полоса при наведении на ссылку была равна с двух сторон*/
+	font-size:14px;
+}
+
+.filtr li:hover {
+	border-bottom:2px solid #7b7d7c; 
+}
+
+.filtr ol:nth-child(1) {
+	float:right;
+}
+
+/*объявления*/
+.maps {
+	
+	position: relative;
+}
+
+#map { /*карта*/
+	
+	height:500px; 
+	width: 75%;
+	border: 1px solid #7b7d7c;
+}
+
+ #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        z-index: 5;
+        padding: 5px;
+        text-align: center;
+        line-height: 30px;
+        padding-left: 10px;
+		
+	}
+#floating-panel input {
+	
+	border:none;
+	outline:none;
+ padding: 10px 20px;
+	color:#fff;
+	background: linear-gradient(to bottom,#3db8b8, #298181); 
+	border-radius:10px; 
+}
+ 
+#floating-panel input:active{
+	color:#298181;
+	background: linear-gradient(to bottom,#3db8b8, #298181); 
+}	
+
+.obyavlenya{
+	height:500px;
+	width: 24%;
+	border:1px solid #7b7d7c;
+	float: left;
+	overflow: hidden;
+}
+
+.obyavlenya li:nth-child(n+2) { /*всё, кроме картинки*/
+	font-size:12px;
+	width: 60%;
+	padding:0 0 0 5px;
+}
+
+.obyavlenya li:nth-child(1){
+	float:left;
+	
+}
+
+.obyavlenya li:nth-child(4) {
+	height: 30px;
+	overflow:hidden;
+}
+
+.obyavlenya a, .obyavlenya li:nth-child(2) {
+	font-size: 16px;
+	font-weight:700;
+}
+
+.obyavlenya ol {
+	border-bottom:1px solid #7b7d7c;
+	padding:10px 10px 10px 20px;
+	height:102px;
+	overflow:hidden;
+}
+
+/*новые обновления*/
+article {
+	clear:both;
+	overflow:hidden;
+}
+
+figure {
+	position: relative;
+	width: 23%;
+	float: left;
+	text-align:center;
+	padding-right:10px;
+}
+
+figure h6 {
+	position: absolute;
+	bottom: 45%;
+	left: 0px;
+	width: 40%;
+	font-weight: 500;
+	font-size:12px;
+	padding: 10px 20px;
+}
+
+figure h6:hover {
+	position: absolute;
+	left: 5%;
+	transition: all 0.2s linear;
+}
+
+figure img:hover {
+	outline: 5px solid #41a0a0;
+	transition: all 0.2s linear;
+	outline-offset: -5px;
+	-webkit-filter: opacity(.8);
+	filter: opacity(.8);
+	opacity:.75; /*filter: alpha(Opacity=75); для ИЕ*/
+}
+
+figcaption p {
+	font-size:20px;
+	padding: 10px 20px;
+}
+figcaption {
+	height: 125px;
+	overflow: hidden;
+}
+
+figure:last-child {/*"показать все новости"*/
+	clear: both;
+	width:100%;
+	text-align:right;
+	padding:20px 0;
+	border:none;
+}
+
+figure img  {
+	width:100%;
+}
+/*комментарии*/
+.otvet {
+	background: #c7f6f7; 
+	font-style:italic;
+	
+}
+
+.otvet  p {
+	padding: 20px;
+}
+
+.otvet div {
+	display: inline-block;
+	padding:20px 0 20px 20px;
+	width: 23%;
+	vertical-align: top;
+}
+
+.otvet img {
+	float:left;
+	border: 5px solid rgba(82, 200, 200, 0.3);
+	/*дополнительно для IE8 карандашом в конспекте*/
+	border-radius:50%;
+	width: 50px;
+	height: 50px;
+	margin-top:20px;
+}
+
+.otvet .otvet1 img{
+	border: 5px solid rgba(82, 200, 200, 0.3);
+	/*дополнительно для IE8? карандашом в конспекте*/
+	border-radius:50%;
+	width: 150px;
+	height: 150px;
+}
+
+.otvet .otvet1  {
+	width: 45%;
+}
+
+/*инфографика*/
+.info, footer img, #scr, #curve_chart{
+	width:25%;
+	float: left;
+}
+
+
+footer img:last-child {
+	width:11%;
+}
+
+.info span, .info a {
+	font-size: 30px;
+}
+
+.info a {
+	border: 1px solid #008080;
+	padding:0 10px;
+}
+
+.infographic, .infographic a, rt{
+	text-align: center;
+	font-size: 16px;
+}
+
+.infographic a{
+	padding: 5px 7px;
+	line-height: 100px;
+	border-radius:50%;
+	border: 5px solid #fff;
+	background: #d2d3d3;
+
+}
+.infographic input{
+	
+	padding: 5px 7px;
+	line-height: 20px;
+	border-radius:50%;
+	border: 5px solid #fff;
+	background: #d2d3d3;
+	color:#008080
+}
+.infographic input:hover {
+	border: 5px solid #008080;
+	background:#008080;
+	color:#fff;
+}
+.infographic input:active {
+	outline:none;
+	border: 5px solid #008080;
+	background:#008080;
+	color:#fff;
+}
+.infographic p{
+	display:block;
+}
+
+.infographic a:hover {
+	border: 5px solid #008080;
+}
+ .info2 {
+	 padding-top:100px;
+ }
+ /*соц сети*/
+.post-social {
+	clear:both;
+	width: 20%;
+	float: right;
+	margin-right:20px;
+	text-align: right;
+	font-size: 18px;
+}
+
+.post-social a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;/* чтобы был точно квадратик*/
+	margin-left: 15px;
+	line-height: 32px;/*чтобы распологались соцсети в квадратике по центру*/
+	text-align: center;
+	border-radius:50%;
+	border: 2px solid #424242;
+	font-weight: bold;
+	margin: 0;
+}
+
+.post-social a:hover {
+	font-weight: normal;
+	border: 2px solid #008080;
+}
+
+.foter, .right {
+	margin: 20px 0 20px 20px;
+}
+footer {
+	overflow: hidden;
+}
+
+
+#scr {
+background-image: url(searh1.jpg);
+	position: relative;
+	margin:0px auto;
+	width: 230px;
+	height: 230px;
+	/*background-color: white;*/
+	background-size: cover;
+	border: 3px solid #008080;
+	margin-left: 20px;
+	
+}
+.right {
+	/*position: relative;
+	/*margin: 5px 45%;*/
+	font: 50pt;
+	font-weight: bold;
+	text-align: center;
+	color: #008080;
+	background:white;
+	border: 2px solid #008080;
+	outline:none;
+	width:50px;
+	height:50px;
+}
+
+.right:hover{
+	outline:none;
+	background:#008080;
+	color: #fff;
+	border: 2px solid #008080;
+}
+
+@media (min-width:820px) and (max-width:1098px){
+
+#searchform input {
+	width:150px;
+}
+
+section h2{
+	padding-left: 0; 
+	margin:0 25%;
+	text-align:right;
+}
+
+.filtr ol:nth-child(1), .obyavlenya li:nth-child(1) {
+	float:none;
+}
+
+.obyavlenya li, .obyavlenya li:nth-child(n+2) { /*всё, кроме картинки*/
+	padding:0;
+	width: 100%;
+	text-align: center;
+}
+
+.obyavlenya ol {
+	height:190px;
+}
+
+
+figure h6, .infographic, footer img:nth-child(n+2) {
+	display:none;
+}
+
+.otvet, img {
+	font-size: 12px;
+}
+
+.info, footer img {
+	width:45%;
+}
+}
+
+@media (min-width:629px) and (max-width:819px){
+	
+header li:nth-child(1), .menu>li, .menu>li:first-child, .filtr ol:nth-child(1), .obyavlenya li:nth-child(1), .post-social {
+	float:none;
+}	
+
+#searchform input, button, section a, figure h6, .otvet>div:nth-child(3), .infographic, footer img:nth-child(n+2) {
+	display:none;
+}
+
+section h2{
+	padding-left: 0; 
+	margin:0 25%;
+}
+
+.menu>li:nth-child(2) {
+	width:75%;
+}
+
+.menu ol {
+	top: 107px;  
+}
+ 
+nav li {
+	width: 18%;
+}
+
+.obyavlenya li, .obyavlenya li:nth-child(n+2) { /*всё, кроме картинки*/
+	padding:0;
+	width: 100%;
+	text-align: center;
+}
+
+.obyavlenya ol {
+	height:210px;
+}
+
+.otvet, img {
+	font-size: 12px;
+}
+
+.otvet>div:nth-child(2), .info, footer img  {
+	width: 45%;
+}
+
+.otvet .otvet1 img{
+	width: 50px;
+	height: 50px;
+	margin-top:20px;
+}
+}
+
+@media (min-width:519px) and (max-width:630px){
+header ol:nth-child(1) {
+	font-size:20px;
+	width:50%;
+	margin:0 auto;
+}
+	
+footer, h4, .Bloki,.otvet  ,figure h6, article figure:nth-child(4) , section a, .menu>li:hover ol, header ol:nth-child(2), header li:nth-child(3),#searchform input, button, section, .filtr li:nth-child(6), .filtr ol:nth-child(1) {
+	display:none;
+}
+  
+.menu>li:first-child, header ol:nth-child(1), .obyavlenya, figure, .post-social  { 
+	float:none;
+}
+
+.menu>li:nth-child(2) {
+	width:75%;
+}
+ 
+nav li {
+	width: 20%;
+}
+ 
+.obyavlenya{
+	height:700px;
+}
+
+.obyavlenya li:nth-child(n+2) { /*всё, кроме картинки*/
+	width: 80%;
+	
+}
+
+figure img:hover {
+	outline: none;
+}
+
+figure img, #map, .obyavlenya, figure  {
+	width:100%;
+}
+.post-social {
+	width: 30%;
+}
+}
+
+@media screen and (max-width:520px){
+header ol:nth-child(1), .menu>li:first-child, .menu>li:nth-child(2), .menu>li:nth-child(2), nav li , .filtr li{
+	font-size:20px;
+	width:50%;
+	margin:0 auto;
+	text-align: center;
+}
+
+.filtr li{
+	font-size:20px;
+	width:100%;
+	text-align: center;
+}
+	
+footer, h4, .Bloki,.otvet  ,figure h6, article figure:nth-child(4) , section a, .menu>li:hover ol, header ol:nth-child(2), header li:nth-child(3),#searchform input, button, section, .filtr ol:nth-child(1) {
+	display:none;
+}
+  
+.menu>li:first-child, header ol:nth-child(1), .obyavlenya, figure, .post-social  { 
+	float:none;
+	display: block;
+	
+}
+
+.menu>li:nth-child(2) {
+	float:none;
+}
+  
+.obyavlenya{
+	height:700px;
+}
+
+.obyavlenya li:nth-child(n+2) { 
+	width: 80%;
+}
+.obyavlenya li, .obyavlenya li:nth-child(n+2) { 
+	padding:0;
+	width: 100%;
+	text-align: center;
+}
+
+.obyavlenya ol {
+	height:210px;
+}
+
+figure img:hover {
+	outline: none;
+}
+
+figure img, #map, .obyavlenya, figure  {
+	width:100%;
+}
+.post-social {
+	width: 10%;
+	display:none;
+}
+

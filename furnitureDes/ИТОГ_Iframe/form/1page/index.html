@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>1.Форма подачи объявления</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700i" rel="stylesheet">
+	<!--форма подачи объявления по поиску пропавшего питомца, будет заполняться в три этапа, 
+	1. подача объявления, описание питомца
+	2.загрузка фотографмии питомца контактные данные
+	3.карта на которой будут отмечать место пропажи питомца-->
+
+	</head>
+  <body>
+	<script src='../../javascript/script1.js'></script>
+	<div class="new1">
+		
+		<form method="" action="">
+			
+			<h1> Описание </h1>
+			
+			<div class="new2"></div>
+			
+			<div>	
+				<label for="vibor" > Я</label>
+					<input type="radio" name="kategoriua" id="vibor" value="потерял" checked> потерял
+					<input type="radio" name="kategoriua" id="vibor" value="нашел"> нашел
+			</div>
+						
+			<div  class="new3">
+				<label for="pitomec"> Животное </label>
+				<select name="pitomeс" id="pitomec">
+					<option> Собака </option>
+					<option value="Кот"> Кот </option>
+					<option value="Пернатое"> Пернатое </option>
+					<option value="Грызуны"> Грызун </option>
+					<option value="Другое"> Другое </option>
+				</select>
+			</div>
+			
+			<div class="new4" >
+				<label for="gorod"></label>
+				<input type="text"   name="city" value="" list="city" id="gorod" placeholder="Населенный пункт*"  pattern="^[А-Яа-яЁё\s]+$" required>
+				<datalist id="city"> <!--Internet Explorer до версии 10.0 отображает список внутри <datalist> в виде текста, остальные браузеры, которые не поддерживают этот тег, скрывают список.-->
+					<option value="Минск">  </option>
+					<option value="Витебск">  </option>
+					<option value="Могилев">  </option>
+					<option value="Гродно">  </option>
+					<option value="Гомель">  </option>
+					<option value="Брест">  </option>
+				</datalist> <!--для наглядного примера добавила неск, городов-->
+			</div>
+			
+			<div class="text">
+				<label for="name" ></label>
+				<textarea type="text" name="obyavlenie" id="name" placeholder="Описание животного*"  maxlength="290"   rows="8" value='' required></textarea>
+			</div>
+			
+					
+			<div class="new2 new5"></div>
+			
+			<input type="button"  value='Отмена'> 
+			<input type="button"  onclick='new2()' value='Перейти дальше '>  
+	
+		</form>
+		
+		<div>
+			<img src="img/1.png" alt="Opisanie" >
+			<p>Опишите пропавшего/найденного животного</p>
+			
+			<img src="img/2.png" alt="Kontacty" >
+			<p>Загрузите фотографию </p>
+			<p>питомца и оставте свои контактные данные</p>
+			
+			 <img src="img/3.png" alt="Karta" >
+			 <p>Обозначьте на карте место пропажи/находки</p>
+		</div>
+		
+	</div>
+	<iframe id="idframe" src="../2page/index.html" style="display:none; position:fixed; left:0%; top:0%" name="tree2" height="100%" width="100%" scrolling="no" ></iframe>	
+	</body>
+</html>
